@@ -52,20 +52,20 @@ jobs:
     - name: Terraform Format
       run: |
           pwd
-          cd quickstart/rancher/aws
+          cd rancher/aws
           terraform fmt
 
     # Validates the Terraform configuration files
     - name: Terraform Validate
       run: |
           pwd
-          cd quickstart/rancher/aws
+          cd rancher/aws
           terraform validate
 
     - name: Terraform Plan
       run: |
           pwd
-          cd quickstart/rancher/aws
+          cd rancher/aws
           terraform plan
 
     - name: Setup go
