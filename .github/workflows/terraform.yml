@@ -43,7 +43,10 @@ jobs:
 
     # Initialize a new or existing Terraform working directory by creating initial files, loading any remote state, downloading modules, etc.
     - name: Terraform Init
-      run: terraform init
+      run: |
+          pwd
+          cd tarraform
+          terraform init
 
     # Checks that all Terraform configuration files adhere to a canonical format
     - name: Terraform Format
@@ -51,10 +54,16 @@ jobs:
 
     # Validates the Terraform configuration files
     - name: Terraform Validate
-      run: terraform validate
+      run: |
+          pwd
+          cd tarraform
+          terraform init
 
     - name: Terraform Plan
-      run: terraform plan
+      run: |
+          pwd
+          cd tarraform
+          terraform init
 
     - name: Setup go
       uses: actions/setup-go@v2
