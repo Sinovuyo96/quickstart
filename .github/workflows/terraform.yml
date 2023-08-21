@@ -46,7 +46,7 @@ jobs:
       run: |
           pwd
           cd tarraform
-          terraform init
+          terraform init/aws
 
     # Checks that all Terraform configuration files adhere to a canonical format
     - name: Terraform Format
@@ -56,13 +56,13 @@ jobs:
     - name: Terraform Validate
       run: |
           pwd
-          cd tarraform
+          cd tarraform/aws
           terraform init
 
     - name: Terraform Plan
       run: |
           pwd
-          cd tarraform
+          cd tarraform/aws
           terraform init
 
     - name: Setup go
