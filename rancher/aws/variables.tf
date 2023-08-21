@@ -41,13 +41,13 @@ variable "prefix" {
 variable "instance_type" {
   type        = string
   description = "Instance type used for all EC2 instances"
-  default     = "t3a.medium"
+  default     = "t2.micro"
 }
 
 variable "windows_instance_type" {
   type        = string
   description = "Instance type used for all EC2 windows instances"
-  default     = "t3a.large"
+  default     = "t2.micro"
 }
 
 variable "rancher_kubernetes_version" {
