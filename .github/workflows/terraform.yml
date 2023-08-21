@@ -45,27 +45,27 @@ jobs:
     - name: Terraform Init
       run: |
           pwd
-          cd quickstart/tarraform/aws
+          cd rancher/aws
           terraform init
 
     # Checks that all Terraform configuration files adhere to a canonical format
     - name: Terraform Format
       run: |
           pwd
-          cd quickstart/tarraform/aws
+          cd quickstart/rancher/aws
           terraform fmt
 
     # Validates the Terraform configuration files
     - name: Terraform Validate
       run: |
           pwd
-          cd quickstart/tarraform/aws
+          cd quickstart/rancher/aws
           terraform validate
 
     - name: Terraform Plan
       run: |
           pwd
-          cd quickstart/tarraform/aws
+          cd quickstart/rancher/aws
           terraform plan
 
     - name: Setup go
